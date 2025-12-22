@@ -3,7 +3,6 @@
 This repository contains a lightweight personal website built with plain HTML, CSS, and JavaScript. It includes an academic profile and a photography gallery and is ready to be deployed to GitHub Pages.
 
 ## Features
-
 # Personal Website — zhaodong-lyu.github.io
 
 This repository contains a lightweight personal website built with plain HTML, CSS, and JavaScript. It includes an academic profile and a photography gallery and is ready to be deployed to GitHub Pages.
