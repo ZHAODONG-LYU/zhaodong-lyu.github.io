@@ -87,153 +87,119 @@ git push -u origin main
 
 #### 添加简历
 1. 将你的简历PDF文件放在 `assets/` 文件夹，命名为 `cv.pdf`
-2. 链接会自动指向该文件
+git branch -M main
+git add .
+git commit -m "Initial personal site"
 
-#### 添加头像
-1. 将你的头像照片放在 `assets/images/` 文件夹，命名为 `avatar.jpg`
-2. 推荐尺寸：正方形，至少200x200像素
+# Personal Website — zhaodong-lyu.github.io
 
-#### 添加摄影作品
+This repository contains a lightweight personal website built with plain HTML, CSS and JavaScript. It includes an academic profile and a photography gallery and is ready to be deployed to GitHub Pages.
 
-**第一步：准备照片**
-- 将照片放在 `assets/images/photography/` 文件夹
-- 推荐格式：JPG，尺寸1200x1200像素以上
+## Features
 
-**第二步：编辑 `assets/js/script.js`**
+- Responsive layout for desktop and mobile
+- Sections: Home, Academic, Photography, Contact
+- Photography gallery with theme and date filters and a lightbox viewer
+- Easy customization with no build step required
+- Optional GitHub Actions workflow included for automated deployment
 
-找到 `photographyData` 数组，添加你的照片信息：
+## Project Structure
 
-```javascript
-const photographyData = [
-    {
-        id: 1,
-        title: "照片标题",
-        theme: "风景",  // 主题：风景、人物、建筑、微距、其他
-        date: "2024-01-15",  // 日期：YYYY-MM-DD格式
-        year: 2024,
-        month: 1,
-        image: "assets/images/photography/photo-name.jpg"
-    },
-    // 添加更多照片...
-];
+```
+personal-website/
+├── index.html              # Main page
+├── README.md               # This document
+├── .gitignore
+├── assets/
+│   ├── css/
+│   │   └── style.css      # Styles
+│   ├── js/
+│   │   └── script.js      # Client-side scripts
+│   ├── images/
+│   │   ├── avatar.jpg     # Avatar image
+│   │   ├── cv.pdf         # Resume PDF
+│   │   └── photography/   # Photography images
+└── .github/
+    └── workflows/
+        └── deploy.yml     # Optional GitHub Actions workflow
 ```
 
-可用的主题（theme）：
-- 风景
-- 人物
-- 建筑
-- 微距
-- 其他
+## Quick Start
 
-你可以自由添加新的主题，过滤器会自动生成。
+### 1) Create the repository on GitHub
 
-## GitHub Actions部署
+1. Go to https://github.com and sign in.
+2. Create a new public repository named exactly `zhaodong-lyu.github.io`.
 
-项目已经包含了自动部署配置 `.github/workflows/deploy.yml`。
+### 2) Push this project to GitHub
 
-**工作原理：**
-1. 推送代码到main/master分支
-2. GitHub Actions自动运行
-3. 自动部署到GitHub Pages
-4. 访问 `https://zhaodong-lyu.github.io` 查看
+Run these commands from the `personal-website` directory:
 
-**启用方法：**
-1. 进入GitHub仓库 Settings → Pages
-2. 在"Build and deployment"中选择"GitHub Actions"
-3. 确保分支是 `main` 或 `master`
+```bash
+git init
+git branch -M main
+git add .
+git commit -m "Initial personal site"
+git remote add origin https://github.com/zhaodong-lyu/zhaodong-lyu.github.io.git
+git push -u origin main
+```
 
-## 特性说明
+### 3) Enable GitHub Pages
 
-### 摄影集功能
-- **主题分类**：按选定的主题快速筛选
-- **年份分类**：按年份快速筛选
-- **多种排序**：最新、最旧、按主题
-- **灯箱浏览**：点击照片查看大图，支持键盘导航
-- **响应式**：自适应各种屏幕尺寸
+You can use the Static HTML option in the Pages settings (recommended for this project), or enable the included GitHub Actions workflow in `.github/workflows/deploy.yml`.
 
-### 键盘快捷键
-在灯箱浏览时：
-- `←` / `→` ：上一张/下一张照片
-- `Esc` ：关闭灯箱
+After deployment, your site will be available at:
 
-### 学术部分
-- **关于**：个人信息和简历下载
-- **研究方向**：展示3个研究领域
-- **论文发表**：列表展示论文信息
-- **教学**：展示教学经历
+`https://zhaodong-lyu.github.io`
 
-## 联系表单
+## Customization
 
-联系表单目前只是前端验证。如果想要真正接收消息，可以集成以下服务：
+### Personal Info
 
-### 选项1：使用 Formspree
-1. 访问 https://formspree.io/
-2. 创建表单，获得表单ID
-3. 在 `index.html` 中修改表单的 `action` 属性
+Edit `index.html` to update your name, title, bio, contact links, and other text content.
 
-### 选项2：使用 Netlify Forms
-1. 将项目部署到 Netlify
-2. Netlify 会自动处理表单
+### Resume and Avatar
 
-### 选项3：使用 Emailjs
-添加客户端邮件发送库
+- Place your resume at `assets/cv.pdf`.
+- Place your avatar at `assets/images/avatar.jpg` (square image recommended).
 
-## 自定义样式
+### Photography Gallery
 
-主要颜色定义在 `assets/css/style.css` 的 `:root` 中：
+1. Copy your photos into `assets/images/photography/`.
+2. Edit the `photographyData` array inside `assets/js/script.js` to add entries for each photo.
 
-```css
-:root {
-    --primary-color: #2563eb;      /* 主色调（蓝色） */
-    --secondary-color: #7c3aed;    /* 副色调（紫色） */
-    --text-color: #1f2937;         /* 文字颜色 */
-    --light-bg: #f9fafb;           /* 浅色背景 */
+Example entry:
+
+```javascript
+{
+  id: 1,
+  title: "Sunrise on the Ridge",
+  theme: "Landscape",     // e.g. Landscape, Portrait, Architecture, Macro, Other
+  date: "2024-01-15",     // YYYY-MM-DD
+  year: 2024,
+  month: 1,
+  image: "assets/images/photography/photo1.jpg"
 }
 ```
 
-修改这些变量可以改变整个网站的配色。
+The gallery UI supports filtering by theme and year and includes a lightbox viewer with keyboard navigation.
 
-## 性能优化建议
+## Deployment Options
 
-1. **图片优化**
-   - 使用 WebP 格式（推荐）
-   - 使用工具压缩图片大小
-   - 为大图片使用懒加载
+- Static HTML (simple): Use GitHub Pages Static HTML option in repository Settings → Pages.
+- GitHub Actions (automated): The repository already includes `.github/workflows/deploy.yml` for deploying via Actions.
 
-2. **文件优化**
-   - 最小化CSS和JS
-   - 合并小图片为精灵图
+## Performance Tips
 
-## 常见问题
+1. Optimize images (use WebP where appropriate and create smaller thumbnails).
+2. Use lazy loading for large image lists (the current code uses `loading="lazy"`).
+3. Minify CSS and JS for production if needed.
 
-**Q: 网站显示为空白？**
-A: 检查GitHub Pages设置是否启用，确保分支是main或master。
+## Contact & Support
 
-**Q: 照片不显示？**
-A: 检查照片文件是否在正确路径，路径是否有拼写错误。
-
-**Q: 域名能否自定义？**
-A: 可以。在仓库Settings→Pages中配置自定义域名。
-
-## 许可证
-
-这个项目是自由的，你可以自由使用、修改和分发。
-
-## 更新历史
-
-- v1.0 (2024) - 初始版本
-  - 基础布局和样式
-  - 学术信息展示
-  - 摄影集功能
-  - GitHub Actions自动部署
-
-## 支持
-
-如有问题或建议，可以：
-1. 检查 README 的常见问题部分
-2. 查看代码注释
-3. 修改 JavaScript 中的摄影数据
+If you need help customizing the site or automating image processing, open an issue or edit the files directly. The key files to edit are `index.html` and `assets/js/script.js`.
 
 ---
 
-**开始使用：** 现在就可以将这个项目推送到GitHub并开始自定义你的个人主页了！
+You can now push changes and visit `https://zhaodong-lyu.github.io` to preview your site.
+
