@@ -1,11 +1,11 @@
-// ===== 摄影集数据 ===== 
-// 这里定义你的摄影集照片数据
-// 按需修改并添加你的照片信息
+// ===== Photography Data ===== 
+// Define your photography portfolio data here
+// Edit and add your photo information as needed
 const photographyData = [
     {
         id: 1,
-        title: "山峰日出",
-        theme: "风景",
+        title: "Mountain Sunrise",
+        theme: "Landscape",
         date: "2024-01-15",
         year: 2024,
         month: 1,
@@ -13,8 +13,8 @@ const photographyData = [
     },
     {
         id: 2,
-        title: "城市夜景",
-        theme: "建筑",
+        title: "City Nightscape",
+        theme: "Architecture",
         date: "2024-02-20",
         year: 2024,
         month: 2,
@@ -22,8 +22,8 @@ const photographyData = [
     },
     {
         id: 3,
-        title: "花卉特写",
-        theme: "微距",
+        title: "Flower Close-up",
+        theme: "Macro",
         date: "2024-03-10",
         year: 2024,
         month: 3,
@@ -31,8 +31,8 @@ const photographyData = [
     },
     {
         id: 4,
-        title: "人物肖像",
-        theme: "人物",
+        title: "Portrait",
+        theme: "Portrait",
         date: "2023-11-05",
         year: 2023,
         month: 11,
@@ -40,8 +40,8 @@ const photographyData = [
     },
     {
         id: 5,
-        title: "古建筑",
-        theme: "建筑",
+        title: "Ancient Architecture",
+        theme: "Architecture",
         date: "2023-09-12",
         year: 2023,
         month: 9,
@@ -49,8 +49,8 @@ const photographyData = [
     },
     {
         id: 6,
-        title: "风景长曝",
-        theme: "风景",
+        title: "Landscape Long Exposure",
+        theme: "Landscape",
         date: "2023-07-22",
         year: 2023,
         month: 7,
@@ -178,7 +178,7 @@ function renderGallery(photos) {
     gallery.innerHTML = '';
     
     if (photos.length === 0) {
-        gallery.innerHTML = '<p style="grid-column: 1/-1; text-align: center; padding: 2rem;">没有找到匹配的照片</p>';
+        gallery.innerHTML = '<p style="grid-column: 1/-1; text-align: center; padding: 2rem;">No matching photos found</p>';
         return;
     }
     
@@ -282,6 +282,6 @@ document.getElementById('contact-form').addEventListener('submit', (e) => {
     // 这里可以添加表单提交逻辑
     // 可以使用第三方服务如 FormSubmit, Netlify Forms 等
     
-    alert('感谢您的消息！我会尽快回复你。');
+    alert('Thank you for your message! I will get back to you soon.');
     document.getElementById('contact-form').reset();
 });
