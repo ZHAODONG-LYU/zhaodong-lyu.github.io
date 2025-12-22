@@ -4,6 +4,12 @@ This repository contains a lightweight personal website built with plain HTML, C
 
 ## Features
 
+# Personal Website — zhaodong-lyu.github.io
+
+This repository contains a lightweight personal website built with plain HTML, CSS, and JavaScript. It includes an academic profile and a photography gallery and is ready to be deployed to GitHub Pages.
+
+## Features
+
 - Responsive layout for desktop and mobile
 - Sections: Home, Academic, Photography, Contact
 - Photography gallery with theme and date filters and a lightbox viewer
@@ -109,10 +115,6 @@ If you need help customizing the site or automating image processing, open an is
 ---
 
 You can now push changes and visit `https://zhaodong-lyu.github.io` to preview your site.
-# 个人主页 - zhaodong-lyu.github.io
-
-这是一个使用纯HTML、CSS和JavaScript构建的个人主页，包含学术信息展示和摄影作品集。通过GitHub Actions自动部署到GitHub Pages。
-
 git remote add origin https://github.com/zhaodong-lyu/zhaodong-lyu.github.io.git
 
 # 推送到GitHub
