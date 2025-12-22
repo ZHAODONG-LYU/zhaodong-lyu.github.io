@@ -114,6 +114,9 @@ If you need help customizing the site or automating image processing, open an is
 ---
 
 You can now push changes and visit `https://zhaodong-lyu.github.io` to preview your site.
+---
+
+You can now push changes and visit `https://zhaodong-lyu.github.io` to preview your site.
 git remote add origin https://github.com/zhaodong-lyu/zhaodong-lyu.github.io.git
 
 # 推送到GitHub
