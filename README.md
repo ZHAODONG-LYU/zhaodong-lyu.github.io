@@ -8,7 +8,7 @@ git remote add origin https://github.com/zhaodong-lyu/zhaodong-lyu.github.io.git
 编辑以下文件来个性化你的主页：
 # Personal Website — zhaodong-lyu.github.io
 
-This repository contains a lightweight personal website built with plain HTML, CSS and JavaScript. It includes an academic profile and a photography gallery and is ready to be deployed to GitHub Pages.
+This repository contains a lightweight personal website built with plain HTML, CSS, and JavaScript. It includes an academic profile and a photography gallery and is ready to be deployed to GitHub Pages.
 
 ## Features
 
@@ -118,5 +118,3 @@ If you need help customizing the site or automating image processing, open an is
 
 You can now push changes and visit `https://zhaodong-lyu.github.io` to preview your site.
 │   │   ├── cv.pdf         # Resume PDF
-
-│   │   └── photography/   # Photography images
