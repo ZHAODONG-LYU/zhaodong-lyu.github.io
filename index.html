@@ -11,7 +11,7 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="nav-brand">Zhao Dong</div>
+            <div class="nav-brand">Jordon's Page </div>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
                 <li><a href="#academic" class="nav-link" data-section="academic">Academic</a></li>
@@ -32,14 +32,14 @@
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-avatar">
-                        <img src="assets/images/avatar.jpg" alt="Zhao Dong">
+                        <img src="assets/images/profile.PNG" alt="Zhao Dong">
                     </div>
-                    <h1 class="hero-title">Zhao Dong</h1>
+                    <h1 class="hero-title">Zhaodong Lyu</h1>
                     <p class="hero-subtitle">Scholar / Photographer / Developer</p>
                     <p class="hero-bio">Welcome to my personal website. Here I share my academic research, photography works, and technical achievements.</p>
                     <div class="hero-links">
-                        <a href="#academic" class="btn btn-primary">Explore My Research</a>
-                        <a href="#photography" class="btn btn-secondary">View Photography</a>
+                        <a href="#academic" class="btn btn-primary">Research</a>
+                        <a href="#photography" class="btn btn-secondary">Photography</a>
                     </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@
                 <button class="tab-btn active" data-tab="about">About</button>
                 <button class="tab-btn" data-tab="research">Research</button>
                 <button class="tab-btn" data-tab="publications">Publications</button>
-                <button class="tab-btn" data-tab="teaching">Teaching</button>
+                <button class="tab-btn" data-tab="RA & TA">RA & TA</button>
             </div>
 
             <!-- About -->
@@ -64,8 +64,8 @@
                 <div class="about-grid">
                     <div class="about-text">
                         <h3>About Me</h3>
-                        <p>This is your introduction. Please edit this content to add your personal information, educational background, and work experience.</p>
-                        <p>You can describe your professional background, main research areas, and academic achievements here.</p>
+                        <p>Zhaodong Lyu is a Dual-Degree PhD student at Southeast University and Monash University. He got B.S degree in Communication Engineering at Hunan University, 2021, and M.S degree in Electrical Engineering at Shanghaitech University, 2024. </p>
+                        <p>His current research focuses on FPGA/GPU acceleration for autonomous driving inference and V2X Co-optimization. If you are interested in his research, please feel free to contact him.</p>
                         <div class="cv-button">
                             <a href="assets/cv.pdf" class="btn btn-primary" download>
                                 <i class="fas fa-download"></i> Download CV
@@ -75,9 +75,9 @@
                     <div class="about-contact">
                         <h3>Contact Information</h3>
                         <ul class="contact-list">
-                            <li><strong>Email:</strong> your.email@example.com</li>
-                            <li><strong>Institution:</strong> Your University/Company</li>
-                            <li><strong>Location:</strong> City, Country</li>
+                            <li><strong>Email:</strong> zhaodong.lyu@seu.edu.com</li>
+                            <li><strong>Institution:</strong> Southeast / Monash </li>
+                            <li><strong>Location:</strong> Nanjing / Melbourne</li>
                         </ul>
                     </div>
                 </div>
@@ -87,16 +87,20 @@
             <div class="tab-content" id="research">
                 <div class="research-grid">
                     <div class="research-item">
-                        <h4>Research Area 1</h4>
+                        <h4>FPGA Acceleration</h4>
                         <p>Describe your first research area and key interests.</p>
                     </div>
                     <div class="research-item">
-                        <h4>Research Area 2</h4>
+                        <h4>eGPU Acceleration</h4>
                         <p>Describe your second research area and key interests.</p>
                     </div>
                     <div class="research-item">
-                        <h4>Research Area 3</h4>
+                        <h4>V2X Co-optimization</h4>
                         <p>Describe your third research area and key interests.</p>
+                    </div>
+                    <div class="research-item">
+                        <h4>eFPGA Tapeout</h4>
+                        <p>Tapeout a pure digital embedded FPGA in TSMC28hpc+, with an eFPGA RTL generator - Fabulous eFPGA</p>
                     </div>
                 </div>
             </div>
@@ -105,13 +109,19 @@
             <div class="tab-content" id="publications">
                 <div class="publications-list">
                     <div class="publication-item">
-                        <h4>Paper Title 1</h4>
-                        <p class="publication-authors"><strong>Authors:</strong> Zhao Dong, et al.</p>
-                        <p class="publication-venue"><strong>Published in:</strong> Journal/Conference Name, 2024</p>
-                        <p class="publication-abstract">Paper abstract content.</p>
+                        <h4>EarFDA: A Lightweight and Energy-Efficient Fall Detection Accelerator for Ear-Worn Devices</h4>
+                        <p class="publication-authors"><strong>Authors:</strong> Zhao Dong, Hao Sun, Yuhao Shu, Yajun Ha</p>
+                        <p class="publication-venue"><strong>Published in:</strong> ISCAS, 2024</p>
+                        <!-- <p class="publication-abstract">Fall detection systems are crucial in preventing severe injuries among people with limited mobility.
+                            However, current systems either employ multiple sensors and redundant features, or adopt computation-intensive detection methods, resulting in a high computational burden and inefficient energy consumption.
+                            To address this issue, we propose a lightweight and energy-efficient fall detection accelerator for ear-worn devices, utilizing only one sensor and limited features.
+                            First, we propose an accurate and robust pre-processing method that employs a wider overlapping sliding window to extract a superior feature combination.
+                            Second, based on the extracted features, we develop a lightweight detection network with low-bit quantization, integrating hybrid convolutions.
+                            Third, we design a full-dataflow hardware accelerator for the proposed network to enhance energy efficiency. 
+                            Experimental results on a public dataset show that the proposed FPGA accelerator achieves superior accuracy compared to the state-of-the-art algorithms running on the CPU, with a speed improvement of at least 31.4 times.
+                            Additionally, our accelerator significantly boosts energy efficiency by at least 274 times.</p> -->
                         <div class="publication-links">
-                            <a href="#" class="link">PDF</a>
-                            <a href="#" class="link">BibTeX</a>
+                            <a href="https://ieeexplore.ieee.org/document/10557918" class="link" target="_blank">PDF</a>
                         </div>
                     </div>
                     <div class="publication-item">
@@ -121,26 +131,25 @@
                         <p class="publication-abstract">Paper abstract content.</p>
                         <div class="publication-links">
                             <a href="#" class="link">PDF</a>
-                            <a href="#" class="link">BibTeX</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Teaching -->
-            <div class="tab-content" id="teaching">
+            <!-- RA & TA-->
+            <div class="tab-content" id="RA & TA">
                 <div class="teaching-list">
                     <div class="teaching-item">
-                        <h4>Course Title 1</h4>
-                        <p><strong>Term:</strong> Spring 2024</p>
-                        <p><strong>Role:</strong> Instructor/TA</p>
-                        <p>Course description and student information.</p>
+                        <h4>RA at Southeast University</h4>
+                        <p><strong>Term:</strong> Spring 2025 - Fall 2025</p>
+                        <p><strong>Role:</strong> Research Assistant</p>
+                        <p>End-to-end self-driving algorithm acceleration.</p>
                     </div>
                     <div class="teaching-item">
-                        <h4>Course Title 2</h4>
-                        <p><strong>Term:</strong> Fall 2023</p>
-                        <p><strong>Role:</strong> Instructor/TA</p>
-                        <p>Course description and student information.</p>
+                        <h4>RA at Shanghaitech University</h4>
+                        <p><strong>Term:</strong> Fall 2024 - Spring 2025</p>
+                        <p><strong>Role:</strong> Research Assistant</p>
+                        <p>Solution of flaw detection in CPU-GPU platform; tapeout of digital eFPGA in TSMC28hpc+</p>
                     </div>
                 </div>
             </div>
@@ -150,7 +159,7 @@
     <!-- Photography Section -->
     <section id="photography" class="section photography-section">
         <div class="container">
-            <h2 class="section-title">Photography Portfolio</h2>
+            <h2 class="section-title">Photography</h2>
             
             <!-- Filters -->
             <div class="filters">
@@ -158,20 +167,37 @@
                     <label for="theme-filter">Filter by Theme:</label>
                     <select id="theme-filter">
                         <option value="">All Themes</option>
-                        <option value="Landscape">Landscape</option>
-                        <option value="Portrait">Portrait</option>
-                        <option value="Architecture">Architecture</option>
-                        <option value="Macro">Macro</option>
-                        <option value="Other">Other</option>
+                        <option value="Unknown">Unknown</option>
+                        <option value="Tongling, Anhui">Tongling, Anhui</option>
+                        <option value="Hangzhou, Zhejiang">Hangzhou, Zhejiang</option>
+                        <option value="Shengsi, Zhejiang">Shengsi, Zhejiang</option>
+                        <option value="Changsha, Hunan">Changsha, Hunan</option>
+                        <option value="Hengyang, Hunan">Hengyang, Hunan</option>
+                        <option value="Dishui Lake, Shanghai">Dishui Lake, Shanghai</option>
+                        <option value="Huaxia Park, Shanghai">Huaxia Park, Shanghai</option>
+                        <option value="Gongqing Forest Park, Shanghai">Gongqing Forest Park, Shanghai</option>
+                        <option value="Shanghai Museum">Shanghai Museum</option>
+                        <option value="Sanya, Hainan">Sanya, Hainan</option>
+                        <option value="Nanjing, Jiangsu">Nanjing, Jiangsu</option>
+                        <option value="Singapore">Singapore</option>
+                        <option value="Guilin, Guangxi">Guilin, Guangxi</option>
+                        <option value="Nanjing Forestry University, Jiangsu">Nanjing Forestry University, Jiangsu</option>
+                        <option value="Moller Villa, Shanghai">Moller Villa, Shanghai</option>
+                        <option value="Bozhou, Anhui">Bozhou, Anhui</option>
                     </select>
                 </div>
                 <div class="filter-group">
                     <label for="year-filter">Filter by Year:</label>
                     <select id="year-filter">
                         <option value="">All Years</option>
+                        <option value="2026">2026</option>
+                        <option value="2025">2025</option>
                         <option value="2024">2024</option>
                         <option value="2023">2023</option>
                         <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
                     </select>
                 </div>
             </div>
@@ -193,46 +219,42 @@
     <!-- Contact Section -->
     <section id="contact" class="section contact-section">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <h2 class="section-title">Contact</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Contact Methods</h3>
+                    <h3>Get In Touch</h3>
+                    <p style="margin-bottom: 2rem; text-align: center; color: var(--text-color); opacity: 0.8;">Feel free to reach out through any of the following channels:</p>
                     <div class="contact-methods">
                         <div class="contact-method">
                             <i class="fas fa-envelope"></i>
                             <div>
                                 <strong>Email</strong>
-                                <p><a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                                <p><a href="mailto:zhaodong.lyu@seu.edu.com">zhaodong.lyu@seu.edu.com</a></p>
                             </div>
                         </div>
                         <div class="contact-method">
-                            <i class="fas fa-github"></i>
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <strong>LinkedIn</strong>
+                                <p><a href="https://www.linkedin.com/in/zhaodong-lyu/" target="_blank">Zhaodong Lyu -- LinkedIn</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-orcid"></i>
+                            <div>
+                                <strong>ORCID</strong>
+                                <p><a href="https://orcid.org/my-orcid?orcid=0009-0007-7274-5625" target="_blank">0009-0007-7274-5625</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-github"></i>
                             <div>
                                 <strong>GitHub</strong>
                                 <p><a href="https://github.com/zhaodong-lyu" target="_blank">zhaodong-lyu</a></p>
                             </div>
                         </div>
-                        <div class="contact-method">
-                            <i class="fas fa-linkedin"></i>
-                            <div>
-                                <strong>LinkedIn</strong>
-                                <p><a href="https://linkedin.com/in/yourprofile" target="_blank">Your LinkedIn</a></p>
-                            </div>
-                        </div>
                     </div>
                 </div>
-                <form class="contact-form" id="contact-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
             </div>
         </div>
     </section>
@@ -240,11 +262,10 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Zhao Dong. All rights reserved.</p>
+            <p>&copy; 2026 Jordon Zhao Dong Lyu. All rights reserved.</p>
             <div class="social-links">
                 <a href="https://github.com/zhaodong-lyu" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/ZackeryL7" target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
     </footer>

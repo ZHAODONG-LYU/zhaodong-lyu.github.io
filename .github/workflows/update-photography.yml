@@ -1,0 +1,38 @@
+# 当 photography 文件夹或生成脚本有变动时，自动从图片 EXIF 生成摄影数据并更新 script.js
+name: Update Photography Data
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - 'assets/images/photography/**'
+      - 'scripts/generate_photography_data.py'
+  workflow_dispatch: {}  # 允许在 Actions 页面手动运行
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # 允许 push 更新后的 script.js
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Pillow
+        run: pip install Pillow
+
+      - name: Generate and update photography data
+        run: python3 scripts/generate_photography_data.py --update
+
+      - name: Commit and push if script.js changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git diff --quiet assets/js/script.js || (git add assets/js/script.js && git commit -m "chore: auto-update photography data from EXIF" && git push)
