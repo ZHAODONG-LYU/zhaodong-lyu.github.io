@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zhao Dong - Personal Website</title>
+    <title>Zhaodong Lyu | Personal Website</title>
+    <meta name="description" content="Personal website of Zhaodong Lyu, a dual-degree PhD student working on FPGA and GPU acceleration for autonomous driving inference and V2X co-optimization.">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="nav-brand">Jordon's Page </div>
+            <a href="#home" class="nav-brand">Zhaodong Lyu</a>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
                 <li><a href="#academic" class="nav-link" data-section="academic">Academic</a></li>
                 <li><a href="#photography" class="nav-link" data-section="photography">Photography</a></li>
                 <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
             </ul>
-            <div class="hamburger">
+            <div class="hamburger" aria-label="Open navigation" role="button" tabindex="0">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -26,145 +26,186 @@
         </div>
     </nav>
 
-    <!-- Home Section -->
     <section id="home" class="section home-section active">
-        <div class="hero">
+        <div class="hero-shell">
             <div class="container">
                 <div class="hero-content">
+                    <p class="hero-eyebrow">Dual-Degree PhD Student at Southeast University and Monash University</p>
                     <div class="hero-avatar">
-                        <img src="assets/images/profile.PNG" alt="Zhao Dong">
+                        <img src="assets/images/profile.PNG" alt="Portrait of Zhaodong Lyu">
                     </div>
-                    <h1 class="hero-title">Zhaodong Lyu</h1>
-                    <p class="hero-subtitle">Scholar / Photographer / Developer</p>
-                    <p class="hero-bio">Welcome to my personal website. Here I share my academic research, photography works, and technical achievements.</p>
+                    <p class="hero-overline">Zhaodong Lyu</p>
+                    <h1 class="hero-title">Researching efficient intelligence for real-world systems.</h1>
+                    <p class="hero-subtitle">Also known as Jordon, I work on FPGA and GPU acceleration for autonomous driving inference, embedded systems, and V2X co-optimization.</p>
+                    <div class="hero-meta">
+                        <span>Nanjing / Melbourne</span>
+                        <span>FPGA, GPU, V2X</span>
+                        <span>Scholar, Developer, Photographer</span>
+                    </div>
                     <div class="hero-links">
-                        <a href="#academic" class="btn btn-primary">Research</a>
-                        <a href="#photography" class="btn btn-secondary">Photography</a>
+                        <a href="#academic" class="btn btn-primary">View Academic Profile</a>
+                        <a href="#photography" class="btn btn-secondary">Explore Photography</a>
                     </div>
+                </div>
+                <div class="hero-highlights">
+                    <article class="highlight-card">
+                        <p class="highlight-label">Current Focus</p>
+                        <h2>Accelerating autonomous driving inference on heterogeneous platforms.</h2>
+                        <p>From model deployment to system co-design, the goal is practical performance with strong efficiency.</p>
+                    </article>
+                    <article class="highlight-card">
+                        <p class="highlight-label">Recent Themes</p>
+                        <h2>FPGA dataflow, GPU optimization, and V2X-aware computing.</h2>
+                        <p>Research interests span algorithm acceleration, embedded hardware design, and hardware-software co-optimization.</p>
+                    </article>
+                    <article class="highlight-card">
+                        <p class="highlight-label">Beyond Research</p>
+                        <h2>Photography as another way of observing structure, light, and movement.</h2>
+                        <p>The gallery collects travel and city moments captured across different places and years.</p>
+                    </article>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Academic Section -->
     <section id="academic" class="section academic-section">
         <div class="container">
-            <h2 class="section-title">Academic Profile</h2>
-            
-            <!-- Tabs -->
+            <div class="section-heading">
+                <p class="section-kicker">Academic</p>
+                <h2 class="section-title">Research profile, publications, and experience.</h2>
+                <p class="section-intro">This section gathers the core of my academic work, from background and ongoing interests to selected publications and assistantship experience.</p>
+            </div>
+
             <div class="tabs">
                 <button class="tab-btn active" data-tab="about">About</button>
                 <button class="tab-btn" data-tab="research">Research</button>
                 <button class="tab-btn" data-tab="publications">Publications</button>
-                <button class="tab-btn" data-tab="RA & TA">RA & TA</button>
+                <button class="tab-btn" data-tab="experience">Experience</button>
             </div>
 
-            <!-- About -->
             <div class="tab-content active" id="about">
                 <div class="about-grid">
-                    <div class="about-text">
+                    <div class="about-panel">
                         <h3>About Me</h3>
-                        <p>Zhaodong Lyu is a Dual-Degree PhD student at Southeast University and Monash University. He got B.S degree in Communication Engineering at Hunan University, 2021, and M.S degree in Electrical Engineering at Shanghaitech University, 2024. </p>
-                        <p>His current research focuses on FPGA/GPU acceleration for autonomous driving inference and V2X Co-optimization. If you are interested in his research, please feel free to contact him.</p>
+                        <p>I am a dual-degree PhD student at Southeast University and Monash University. Before starting my PhD, I received my B.S. in Communication Engineering from Hunan University in 2021 and my M.S. in Electrical Engineering from ShanghaiTech University in 2024.</p>
+                        <p>My work focuses on making intelligent systems more efficient and deployable, especially for autonomous driving inference, FPGA and GPU acceleration, and V2X-oriented system co-optimization.</p>
+                        <p>I am especially interested in research that connects algorithm design, hardware architecture, and end-to-end system performance.</p>
                         <div class="cv-button">
                             <a href="assets/cv.pdf" class="btn btn-primary" download>
                                 <i class="fas fa-download"></i> Download CV
                             </a>
                         </div>
                     </div>
-                    <div class="about-contact">
-                        <h3>Contact Information</h3>
+                    <aside class="about-panel about-side">
+                        <h3>Snapshot</h3>
                         <ul class="contact-list">
-                            <li><strong>Email:</strong> zhaodong.lyu@seu.edu.com</li>
-                            <li><strong>Institution:</strong> Southeast / Monash </li>
-                            <li><strong>Location:</strong> Nanjing / Melbourne</li>
+                            <li><strong>Name</strong><span>Zhaodong Lyu (Jordon)</span></li>
+                            <li><strong>Affiliation</strong><span>Southeast University / Monash University</span></li>
+                            <li><strong>Location</strong><span>Nanjing, China / Melbourne, Australia</span></li>
+                            <li><strong>Research</strong><span>FPGA acceleration, GPU acceleration, V2X co-optimization</span></li>
+                            <li><strong>Email</strong><span><a href="mailto:zhaodong.lyu@seu.edu.com">zhaodong.lyu@seu.edu.com</a></span></li>
                         </ul>
-                    </div>
+                    </aside>
                 </div>
             </div>
 
-            <!-- Research -->
             <div class="tab-content" id="research">
                 <div class="research-grid">
-                    <div class="research-item">
-                        <h4>FPGA Acceleration</h4>
-                        <p>Describe your first research area and key interests.</p>
-                    </div>
-                    <div class="research-item">
-                        <h4>eGPU Acceleration</h4>
-                        <p>Describe your second research area and key interests.</p>
-                    </div>
-                    <div class="research-item">
+                    <article class="research-item">
+                        <p class="card-kicker">01</p>
+                        <h4>FPGA Acceleration for Efficient Inference</h4>
+                        <p>Designing dataflow-friendly accelerators and deployment strategies that improve throughput, latency, and energy efficiency for edge intelligence.</p>
+                    </article>
+                    <article class="research-item">
+                        <p class="card-kicker">02</p>
+                        <h4>GPU Optimization for Autonomous Driving Workloads</h4>
+                        <p>Exploring practical acceleration techniques for end-to-end perception and planning pipelines on heterogeneous computing platforms.</p>
+                    </article>
+                    <article class="research-item">
+                        <p class="card-kicker">03</p>
                         <h4>V2X Co-optimization</h4>
-                        <p>Describe your third research area and key interests.</p>
-                    </div>
-                    <div class="research-item">
-                        <h4>eFPGA Tapeout</h4>
-                        <p>Tapeout a pure digital embedded FPGA in TSMC28hpc+, with an eFPGA RTL generator - Fabulous eFPGA</p>
-                    </div>
+                        <p>Studying how communication, computation, and deployment decisions can be jointly optimized for collaborative intelligent transportation systems.</p>
+                    </article>
+                    <article class="research-item">
+                        <p class="card-kicker">04</p>
+                        <h4>Embedded FPGA and Digital Tapeout</h4>
+                        <p>Contributing to a pure-digital embedded FPGA tapeout in TSMC 28HPC+, supported by an RTL generator workflow based on Fabulous eFPGA.</p>
+                    </article>
                 </div>
             </div>
 
-            <!-- Publications -->
             <div class="tab-content" id="publications">
                 <div class="publications-list">
-                    <div class="publication-item">
+                    <article class="publication-item">
+                        <p class="card-kicker">Selected Publication</p>
                         <h4>EarFDA: A Lightweight and Energy-Efficient Fall Detection Accelerator for Ear-Worn Devices</h4>
                         <p class="publication-authors"><strong>Authors:</strong> Zhao Dong, Hao Sun, Yuhao Shu, Yajun Ha</p>
-                        <p class="publication-venue"><strong>Published in:</strong> ISCAS, 2024</p>
-                        <!-- <p class="publication-abstract">Fall detection systems are crucial in preventing severe injuries among people with limited mobility.
-                            However, current systems either employ multiple sensors and redundant features, or adopt computation-intensive detection methods, resulting in a high computational burden and inefficient energy consumption.
-                            To address this issue, we propose a lightweight and energy-efficient fall detection accelerator for ear-worn devices, utilizing only one sensor and limited features.
-                            First, we propose an accurate and robust pre-processing method that employs a wider overlapping sliding window to extract a superior feature combination.
-                            Second, based on the extracted features, we develop a lightweight detection network with low-bit quantization, integrating hybrid convolutions.
-                            Third, we design a full-dataflow hardware accelerator for the proposed network to enhance energy efficiency. 
-                            Experimental results on a public dataset show that the proposed FPGA accelerator achieves superior accuracy compared to the state-of-the-art algorithms running on the CPU, with a speed improvement of at least 31.4 times.
-                            Additionally, our accelerator significantly boosts energy efficiency by at least 274 times.</p> -->
+                        <p class="publication-venue"><strong>Venue:</strong> IEEE ISCAS 2024</p>
+                        <p class="publication-abstract">This work proposes an energy-efficient fall detection accelerator for ear-worn devices, combining compact feature extraction, lightweight neural design, and hardware-aware acceleration.</p>
                         <div class="publication-links">
-                            <a href="https://ieeexplore.ieee.org/document/10557918" class="link" target="_blank">PDF</a>
+                            <a href="https://ieeexplore.ieee.org/document/10557918" class="link" target="_blank" rel="noopener noreferrer">View Paper</a>
                         </div>
-                    </div>
-                    <div class="publication-item">
-                        <h4>Paper Title 2</h4>
-                        <p class="publication-authors"><strong>Authors:</strong> Zhao Dong, et al.</p>
-                        <p class="publication-venue"><strong>Published in:</strong> Journal/Conference Name, 2023</p>
-                        <p class="publication-abstract">Paper abstract content.</p>
-                        <div class="publication-links">
-                            <a href="#" class="link">PDF</a>
-                        </div>
-                    </div>
+                    </article>
+                    <article class="publication-item publication-item-muted">
+                        <p class="card-kicker">In Progress</p>
+                        <h4>More publications will be added here.</h4>
+                        <p class="publication-abstract">This section is being updated as current projects move toward submission and publication.</p>
+                    </article>
                 </div>
             </div>
 
-            <!-- RA & TA-->
-            <div class="tab-content" id="RA & TA">
+            <div class="tab-content" id="experience">
                 <div class="teaching-list">
-                    <div class="teaching-item">
-                        <h4>RA at Southeast University</h4>
-                        <p><strong>Term:</strong> Spring 2025 - Fall 2025</p>
-                        <p><strong>Role:</strong> Research Assistant</p>
-                        <p>End-to-end self-driving algorithm acceleration.</p>
-                    </div>
-                    <div class="teaching-item">
-                        <h4>RA at Shanghaitech University</h4>
-                        <p><strong>Term:</strong> Fall 2024 - Spring 2025</p>
-                        <p><strong>Role:</strong> Research Assistant</p>
-                        <p>Solution of flaw detection in CPU-GPU platform; tapeout of digital eFPGA in TSMC28hpc+</p>
-                    </div>
+                    <article class="teaching-item">
+                        <p class="card-kicker">2025</p>
+                        <h4>Research Assistant, Southeast University</h4>
+                        <p><strong>Term:</strong> Spring 2025 to Fall 2025</p>
+                        <p><strong>Focus:</strong> End-to-end self-driving algorithm acceleration.</p>
+                    </article>
+                    <article class="teaching-item">
+                        <p class="card-kicker">2024 to 2025</p>
+                        <h4>Research Assistant, ShanghaiTech University</h4>
+                        <p><strong>Term:</strong> Fall 2024 to Spring 2025</p>
+                        <p><strong>Focus:</strong> Flaw detection on CPU-GPU platforms and digital eFPGA tapeout in TSMC 28HPC+.</p>
+                    </article>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Photography Section -->
     <section id="photography" class="section photography-section">
         <div class="container">
-            <h2 class="section-title">Photography</h2>
-            
-            <!-- Filters -->
+            <div class="section-heading">
+                <p class="section-kicker">Photography</p>
+                <h2 class="section-title">Places, light, and details worth keeping.</h2>
+                <p class="section-intro">A personal collection of travel and city photographs. You can filter the gallery by location theme and year, then open each image in the lightbox viewer.</p>
+            </div>
+
+            <div class="gallery-stage">
+                <article class="gallery-feature">
+                    <p class="gallery-feature-kicker">Visual Notes</p>
+                    <h3>Photography keeps another record of how I pay attention to systems, spaces, and moments.</h3>
+                    <p>The collection moves between cities, travel, and quiet details. It is less about volume, and more about atmosphere.</p>
+                </article>
+                <div class="gallery-metrics">
+                    <div class="metric-card">
+                        <span class="metric-value">2019-2026</span>
+                        <span class="metric-label">Years in the archive filter</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-value">Travel</span>
+                        <span class="metric-label">Cities, museums, parks, and coastlines</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-value">Light</span>
+                        <span class="metric-label">Architecture, streets, reflections, and landscapes</span>
+                    </div>
+                </div>
+            </div>
+
             <div class="filters">
                 <div class="filter-group">
-                    <label for="theme-filter">Filter by Theme:</label>
+                    <label for="theme-filter">Theme</label>
                     <select id="theme-filter">
                         <option value="">All Themes</option>
                         <option value="Unknown">Unknown</option>
@@ -187,7 +228,7 @@
                     </select>
                 </div>
                 <div class="filter-group">
-                    <label for="year-filter">Filter by Year:</label>
+                    <label for="year-filter">Year</label>
                     <select id="year-filter">
                         <option value="">All Years</option>
                         <option value="2026">2026</option>
@@ -202,28 +243,27 @@
                 </div>
             </div>
 
-            <!-- Sort Options -->
             <div class="sort-options">
                 <button class="sort-btn active" data-sort="date-desc">Newest</button>
                 <button class="sort-btn" data-sort="date-asc">Oldest</button>
                 <button class="sort-btn" data-sort="theme">By Theme</button>
             </div>
 
-            <!-- Gallery Grid -->
             <div class="gallery-grid" id="gallery-grid">
-                <!-- Photos will be loaded dynamically by JavaScript -->
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="section contact-section">
         <div class="container">
-            <h2 class="section-title">Contact</h2>
+            <div class="section-heading">
+                <p class="section-kicker">Contact</p>
+                <h2 class="section-title">Open to research conversations and collaboration.</h2>
+                <p class="section-intro">If my work overlaps with your interests in efficient AI systems, embedded acceleration, or collaborative intelligent transportation, feel free to reach out.</p>
+            </div>
+
             <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    <p style="margin-bottom: 2rem; text-align: center; color: var(--text-color); opacity: 0.8;">Feel free to reach out through any of the following channels:</p>
+                <div class="contact-panel">
                     <div class="contact-methods">
                         <div class="contact-method">
                             <i class="fas fa-envelope"></i>
@@ -236,21 +276,21 @@
                             <i class="fab fa-linkedin"></i>
                             <div>
                                 <strong>LinkedIn</strong>
-                                <p><a href="https://www.linkedin.com/in/zhaodong-lyu/" target="_blank">Zhaodong Lyu -- LinkedIn</a></p>
+                                <p><a href="https://www.linkedin.com/in/zhaodong-lyu/" target="_blank" rel="noopener noreferrer">linkedin.com/in/zhaodong-lyu</a></p>
                             </div>
                         </div>
                         <div class="contact-method">
                             <i class="fab fa-orcid"></i>
                             <div>
                                 <strong>ORCID</strong>
-                                <p><a href="https://orcid.org/my-orcid?orcid=0009-0007-7274-5625" target="_blank">0009-0007-7274-5625</a></p>
+                                <p><a href="https://orcid.org/0009-0007-7274-5625" target="_blank" rel="noopener noreferrer">0009-0007-7274-5625</a></p>
                             </div>
                         </div>
                         <div class="contact-method">
                             <i class="fab fa-github"></i>
                             <div>
                                 <strong>GitHub</strong>
-                                <p><a href="https://github.com/zhaodong-lyu" target="_blank">zhaodong-lyu</a></p>
+                                <p><a href="https://github.com/zhaodong-lyu" target="_blank" rel="noopener noreferrer">github.com/zhaodong-lyu</a></p>
                             </div>
                         </div>
                     </div>
@@ -259,18 +299,17 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Jordon Zhao Dong Lyu. All rights reserved.</p>
+            <p>&copy; 2026 Zhaodong Lyu. All rights reserved.</p>
             <div class="social-links">
-                <a href="https://github.com/zhaodong-lyu" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://x.com/ZackeryL7" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/zhaodong-lyu" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/zhaodong-lyu/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://orcid.org/0009-0007-7274-5625" target="_blank" rel="noopener noreferrer" aria-label="ORCID"><i class="fab fa-orcid"></i></a>
             </div>
         </div>
     </footer>
 
-    <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox">
         <span class="lightbox-close">&times;</span>
         <img class="lightbox-image" src="" alt="">

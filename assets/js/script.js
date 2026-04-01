@@ -477,6 +477,12 @@ const hamburger = document.querySelector('.hamburger');
 if (hamburger) hamburger.addEventListener('click', () => {
     document.querySelector('.nav-menu')?.classList.toggle('active');
 });
+if (hamburger) hamburger.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        document.querySelector('.nav-menu')?.classList.toggle('active');
+    }
+});
 
 // ===== 标签页切换 =====
 document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -694,15 +700,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-});
-
-// ===== 联系表单处理 =====
-document.getElementById('contact-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // 这里可以添加表单提交逻辑
-    // 可以使用第三方服务如 FormSubmit, Netlify Forms 等
-    
-    alert('Thank you for your message! I will get back to you soon.');
-    document.getElementById('contact-form').reset();
 });

@@ -8,7 +8,7 @@ This repository contains a lightweight personal website built with plain HTML, C
 - Sections: Home, Academic, Photography, Contact
 - Photography gallery with theme and date filters and a lightbox viewer
 - Easy customization with no build step required
-- Optional GitHub Actions workflow included for automated deployment
+- Optional GitHub Actions workflow included for photography data updates
 
 ## Project Structure
 
@@ -26,9 +26,9 @@ personal-website/
 │   │   ├── avatar.jpg     # Avatar image
 │   │   ├── cv.pdf         # Resume PDF
 │   │   └── photography/   # Photography images
-└── .github/
-    └── workflows/
-        └── deploy.yml     # Optional GitHub Actions workflow
+    └── .github/
+        └── workflows/
+            └── update-photography.yml  # Auto-update photography metadata
 ```
 
 ## Quick Start
@@ -53,7 +53,7 @@ git push -u origin main
 
 ### 3) Enable GitHub Pages
 
-You can use the Static HTML option in the Pages settings (recommended for this project), or enable the included GitHub Actions workflow in `.github/workflows/deploy.yml`.
+Enable GitHub Pages in repository Settings and deploy this repository as a static site.
 
 After deployment, your site will be available at:
 
@@ -93,8 +93,8 @@ The gallery UI supports filtering by theme and year and includes a lightbox view
 
 ## Deployment Options
 
-- Static HTML (simple): Use GitHub Pages Static HTML option in repository Settings → Pages.
-- GitHub Actions (automated): The repository already includes `.github/workflows/deploy.yml` for deploying via Actions.
+- Static HTML (simple): Use GitHub Pages in repository Settings → Pages.
+- GitHub Actions (included): The repository includes `.github/workflows/update-photography.yml` to regenerate photography metadata when new images are pushed.
 
 ## Performance Tips
 
