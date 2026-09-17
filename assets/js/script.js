@@ -463,6 +463,7 @@ const photographyData = [
 function navigateToSection(sectionId) {
     const section = document.getElementById(sectionId);
     if (!section) return;
+    document.querySelector('.navbar')?.classList.toggle('home-nav', sectionId === 'home');
     document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
     section.classList.add('active');
     document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
