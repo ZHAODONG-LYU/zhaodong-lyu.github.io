@@ -1,0 +1,84 @@
+name: Toggle public website
+
+on:
+  workflow_dispatch:
+    inputs:
+      visibility:
+        description: Publicly available or taken offline
+        required: true
+        default: publish
+        type: choice
+        options:
+          - publish
+          - take-offline
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  take-offline:
+    if: inputs.visibility == 'take-offline'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Disable GitHub Pages
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          status=$(curl --silent --output /tmp/pages-response \
+            --write-out '%{http_code}' --request DELETE \
+            --header "Authorization: Bearer ${GITHUB_TOKEN}" \
+            --header "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/pages")
+          if [ "$status" != 204 ] && [ "$status" != 404 ]; then
+            cat /tmp/pages-response
+            exit 1
+          fi
+
+  publish:
+    if: inputs.visibility == 'publish'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Enable Pages for Actions deployments
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          status=$(curl --silent --output /tmp/pages-response \
+            --write-out '%{http_code}' --request POST \
+            --header "Authorization: Bearer ${GITHUB_TOKEN}" \
+            --header "Accept: application/vnd.github+json" \
+            --header "X-GitHub-Api-Version: 2022-11-28" \
+            --data '{"build_type":"workflow"}' \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/pages")
+          if [ "$status" != 201 ] && [ "$status" != 409 ]; then
+            cat /tmp/pages-response
+            exit 1
+          fi
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Prepare static site
+        run: |
+          mkdir _site
+          cp -R index.html index_old.html .nojekyll assets _site/
+
+      - name: Upload static site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
