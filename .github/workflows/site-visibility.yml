@@ -29,6 +29,7 @@ jobs:
       - name: Disable GitHub Pages
         env:
           GITHUB_TOKEN: ${{ secrets.PAGES_ADMIN_TOKEN }}
+          GH_TOKEN: ${{ secrets.PAGES_ADMIN_TOKEN }}
         run: |
           test -n "${GITHUB_TOKEN}" || { echo "PAGES_ADMIN_TOKEN is not configured"; exit 1; }
           status=$(curl --silent --output /tmp/pages-response \
@@ -40,6 +41,7 @@ jobs:
             cat /tmp/pages-response
             exit 1
           fi
+          gh variable set PAGES_PUBLIC --body false
 
   publish:
     if: inputs.visibility == 'publish'
@@ -54,8 +56,10 @@ jobs:
       - name: Enable Pages for Actions deployments
         env:
           GITHUB_TOKEN: ${{ secrets.PAGES_ADMIN_TOKEN }}
+          GH_TOKEN: ${{ secrets.PAGES_ADMIN_TOKEN }}
         run: |
           test -n "${GITHUB_TOKEN}" || { echo "PAGES_ADMIN_TOKEN is not configured"; exit 1; }
+          gh variable set PAGES_PUBLIC --body true
           status=$(curl --silent --output /tmp/pages-response \
             --write-out '%{http_code}' --request POST \
             --header "Authorization: Bearer ${GITHUB_TOKEN}" \
