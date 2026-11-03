@@ -702,3 +702,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+const harborHero = document.querySelector('.hero-content');
+const harborMotion = window.matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)');
+
+function moveHarbor(event) {
+    const bounds = harborHero.getBoundingClientRect();
+    const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+    const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+    harborHero.style.setProperty('--harbor-x', `${-20 * x}px`);
+    harborHero.style.setProperty('--harbor-y', `${-14 * y}px`);
+}
+
+function centerHarbor() {
+    harborHero.style.removeProperty('--harbor-x');
+    harborHero.style.removeProperty('--harbor-y');
+}
+
+function syncHarborMotion() {
+    centerHarbor();
+    if (harborMotion.matches) {
+        harborHero.addEventListener('pointermove', moveHarbor);
+    } else {
+        harborHero.removeEventListener('pointermove', moveHarbor);
+    }
+}
+
+if (harborHero) {
+    syncHarborMotion();
+    harborHero.addEventListener('pointerleave', centerHarbor);
+    harborMotion.addEventListener('change', syncHarborMotion);
+}

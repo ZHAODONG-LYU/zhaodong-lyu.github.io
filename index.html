@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zhaodong Lyu | Personal Website</title>
     <meta name="description" content="Personal website of Zhaodong Lyu, focused on FPGA and GPU acceleration for autonomous driving inference and V2X co-optimization.">
-    <link rel="stylesheet" href="assets/css/style.css?v=20260917-hero2">
+    <link rel="stylesheet" href="assets/css/style.css?v=20261104-snapshot">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -27,40 +27,11 @@
     </nav>
 
     <section id="home" class="section home-section active">
-        <div class="hero-shell">
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="hero-title">Edge Intelligence for Real world.</h1>
-                    <p class="hero-subtitle">Building efficient computing systems for autonomous driving, from FPGA and GPU acceleration to V2X co-optimization.</p>
-                    <div class="hero-meta">
-                        <span>Nanjing / Melbourne</span>
-                        <span>FPGA</span>
-                        <span>Edge Agent</span>
-                        <span>Developer</span>
-                        <span>Photography</span>
-                    </div>
-                    <div class="hero-links">
-                        <a href="#academic" class="btn btn-primary">View Academic Profile</a>
-                        <a href="#photography" class="btn btn-secondary">Explore Photography</a>
-                    </div>
-                </div>
-                <div class="hero-highlights">
-                    <article class="highlight-card">
-                        <p class="highlight-label">Focus</p>
-                        <h2>Autonomous driving inference, made efficient enough for real systems.</h2>
-                        <p>Model deployment, hardware acceleration, and system co-design shaped around practical performance.</p>
-                    </article>
-                    <article class="highlight-card">
-                        <p class="highlight-label">Platforms</p>
-                        <h2>FPGA. GPU. V2X.</h2>
-                        <p>Algorithm acceleration, embedded design, and co-optimization across the stack.</p>
-                    </article>
-                    <article class="highlight-card">
-                        <p class="highlight-label">Outside The Lab</p>
-                        <h2>Photography, as a study of light, structure, and timing.</h2>
-                        <p>A quieter archive of travel, cities, details, and atmosphere.</p>
-                    </article>
-                </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Edge Computing for<br>Real World Intelligence.</h1>
+            <div class="hero-links">
+                <a href="#academic">Academic profile</a>
+                <a href="#photography">Photography</a>
             </div>
         </div>
     </section>
@@ -68,9 +39,8 @@
     <section id="academic" class="section academic-section">
         <div class="container">
             <div class="section-heading">
-                <p class="section-kicker">Academic</p>
-                <h2 class="section-title">Research profile, publications, and experience.</h2>
-                <p class="section-intro">This section gathers the core of my academic work, from background and ongoing interests to selected publications and assistantship experience.</p>
+                <h2 class="section-title">Academic</h2>
+                <a class="cv-link" href="assets/cv.pdf" download>Download CV ↓</a>
             </div>
 
             <div class="tabs">
@@ -83,15 +53,9 @@
             <div class="tab-content active" id="about">
                 <div class="about-grid">
                     <div class="about-panel">
-                        <h3>About Me</h3>
-                        <p>I am currently affiliated with Southeast University and Monash University. Before that, I received my B.S. in Communication Engineering from Hunan University in 2021 and my M.S. in Electrical Engineering from ShanghaiTech University in 2024.</p>
-                        <p>My work focuses on making intelligent systems more efficient and deployable, especially for autonomous driving inference, FPGA and GPU acceleration, and V2X-oriented system co-optimization.</p>
-                        <p>I am especially interested in research that connects algorithm design, hardware architecture, and end-to-end system performance.</p>
-                        <div class="cv-button">
-                            <a href="assets/cv.pdf" class="btn btn-primary" download>
-                                <i class="fas fa-download"></i> Download CV
-                            </a>
-                        </div>
+                        <h3>Zhaodong Lyu</h3>
+                        <p>I work on FPGA and GPU acceleration for autonomous driving at Southeast University and Monash University.</p>
+                        <p>I received my B.S. in Communication Engineering from Hunan University in 2021 and my M.S. in Electrical Engineering from ShanghaiTech University in 2024.</p>
                     </div>
                     <aside class="about-panel about-side">
                         <h3>Snapshot</h3>
@@ -107,46 +71,44 @@
             </div>
 
             <div class="tab-content" id="research">
-                <div class="research-grid">
-                    <article class="research-item">
-                        <p class="card-kicker">01</p>
+                <ol class="research-list">
+                    <li class="research-item">
                         <h4>FPGA Acceleration for Efficient Inference</h4>
                         <p>Designing dataflow-friendly accelerators and deployment strategies that improve throughput, latency, and energy efficiency for edge intelligence.</p>
-                    </article>
-                    <article class="research-item">
-                        <p class="card-kicker">02</p>
-                        <h4>GPU Optimization for Autonomous Driving Workloads</h4>
-                        <p>Exploring practical acceleration techniques for end-to-end perception and planning pipelines on heterogeneous computing platforms.</p>
-                    </article>
-                    <article class="research-item">
-                        <p class="card-kicker">03</p>
-                        <h4>V2X Co-optimization</h4>
-                        <p>Studying how communication, computation, and deployment decisions can be jointly optimized for collaborative intelligent transportation systems.</p>
-                    </article>
-                    <article class="research-item">
-                        <p class="card-kicker">04</p>
+                    </li>
+                    <li class="research-item">
                         <h4>Embedded FPGA and Digital Tapeout</h4>
                         <p>Contributing to a pure-digital embedded FPGA tapeout in TSMC 28HPC+, supported by an RTL generator workflow based on Fabulous eFPGA.</p>
-                    </article>
-                </div>
+                    </li>
+                </ol>
             </div>
 
             <div class="tab-content" id="publications">
                 <div class="publications-list">
                     <article class="publication-item">
-                        <p class="card-kicker">Selected Publication</p>
-                        <h4>EarFDA: A Lightweight and Energy-Efficient Fall Detection Accelerator for Ear-Worn Devices</h4>
-                        <p class="publication-authors"><strong>Authors:</strong> Zhao Dong, Hao Sun, Yuhao Shu, Yajun Ha</p>
-                        <p class="publication-venue"><strong>Venue:</strong> IEEE ISCAS 2024</p>
-                        <p class="publication-abstract">This work proposes an energy-efficient fall detection accelerator for ear-worn devices, combining compact feature extraction, lightweight neural design, and hardware-aware acceleration.</p>
-                        <div class="publication-links">
-                            <a href="https://ieeexplore.ieee.org/document/10557918" class="link" target="_blank" rel="noopener noreferrer">View Paper</a>
-                        </div>
+                        <h4><a href="https://doi.org/10.1016/j.eng.2026.07.031">A software–hardware co-optimization and evaluation framework for modular end-to-end autonomous driving</a></h4>
+                        <p class="publication-authors">C. Ji, X. Li, <strong>Z. Lv</strong>, H. Sun, P. Liu, H. F. Yang, Z. Pu</p>
+                        <p class="publication-venue">Engineering · 2026</p>
                     </article>
-                    <article class="publication-item publication-item-muted">
-                        <p class="card-kicker">In Progress</p>
-                        <h4>More publications will be added here.</h4>
-                        <p class="publication-abstract">This section is being updated as current projects move toward submission and publication.</p>
+                    <article class="publication-item">
+                        <h4><a href="https://doi.org/10.1109/ITC-ASIA71864.2026.11710881">An FPGA-based ML-KEM/ML-DSA accelerator with shared engines and rejection-aware signing scheduling</a></h4>
+                        <p class="publication-authors">W. Mo, J. Zou, Y. Tang, Z. Hu, Q. Deng, <strong>Z. Lyu</strong>, Y. Shu</p>
+                        <p class="publication-venue">IEEE International Test Conference in Asia (ITC-Asia), pp. 1–6 · 2026</p>
+                    </article>
+                    <article class="publication-item">
+                        <h4><a href="https://doi.org/10.1109/JSSC.2024.3396194">eCIMC: A 603.1-TOPS/W eDRAM-based cryogenic in-memory computing accelerator supporting Boolean/convolutional operations</a></h4>
+                        <p class="publication-authors">Y. Shu, H. Zhang, Q. Deng, H. Sun, <strong>Z. Lv</strong>, Y. Li, Y. Ha</p>
+                        <p class="publication-venue">IEEE Journal of Solid-State Circuits, 59(11), pp. 3827–3839 · 2024</p>
+                    </article>
+                    <article class="publication-item">
+                        <h4><a href="https://doi.org/10.23919/ICS.2024.3505839">Overview of cryogenic CMOS based computing systems</a></h4>
+                        <p class="publication-authors">Y. Shu, B. Ning, Y. Li, <strong>Z. Lyu</strong>, J. Wang, L. Lan, Y. Zhou, M. Zhang, H. Zhang, et al.</p>
+                        <p class="publication-venue">Integrated Circuits and Systems, 1(4), pp. 167–177 · 2024</p>
+                    </article>
+                    <article class="publication-item">
+                        <h4><a href="https://doi.org/10.1109/ISCAS58744.2024.10557918">EarFDA: A lightweight and energy-efficient fall detection accelerator for ear-worn devices</a></h4>
+                        <p class="publication-authors"><strong>Z. Lv</strong>, H. Sun, Y. Shu, Y. Ha</p>
+                        <p class="publication-venue">IEEE International Symposium on Circuits and Systems (ISCAS), pp. 1–5 · 2024</p>
                     </article>
                 </div>
             </div>
@@ -173,38 +135,14 @@
     <section id="photography" class="section photography-section">
         <div class="container">
             <div class="section-heading">
-                <p class="section-kicker">Photography</p>
-                <h2 class="section-title">Places, light, and details worth keeping.</h2>
-                <p class="section-intro">A personal collection of travel and city photographs. You can filter the gallery by location theme and year, then open each image in the lightbox viewer.</p>
-            </div>
-
-            <div class="gallery-stage">
-                <article class="gallery-feature">
-                    <p class="gallery-feature-kicker">Visual Notes</p>
-                    <h3>Photography keeps a second record of how I observe systems, spaces, and moments.</h3>
-                    <p>The collection moves through cities, travel, and quiet details. Less about volume. More about atmosphere.</p>
-                </article>
-                <div class="gallery-metrics">
-                    <div class="metric-card">
-                        <span class="metric-value">2019-2026</span>
-                        <span class="metric-label">Years in the archive filter</span>
-                    </div>
-                    <div class="metric-card">
-                        <span class="metric-value">Travel</span>
-                        <span class="metric-label">Cities, museums, parks, and coastlines</span>
-                    </div>
-                    <div class="metric-card">
-                        <span class="metric-value">Light</span>
-                        <span class="metric-label">Architecture, streets, reflections, and landscapes</span>
-                    </div>
-                </div>
+                <h2 class="section-title">Photography</h2>
             </div>
 
             <div class="filters">
                 <div class="filter-group">
-                    <label for="theme-filter">Theme</label>
+                    <label for="theme-filter">Location</label>
                     <select id="theme-filter">
-                        <option value="">All Themes</option>
+                        <option value="">All locations</option>
                         <option value="Unknown">Unknown</option>
                         <option value="Tongling, Anhui">Tongling, Anhui</option>
                         <option value="Hangzhou, Zhejiang">Hangzhou, Zhejiang</option>
@@ -243,7 +181,7 @@
             <div class="sort-options">
                 <button class="sort-btn active" data-sort="date-desc">Newest</button>
                 <button class="sort-btn" data-sort="date-asc">Oldest</button>
-                <button class="sort-btn" data-sort="theme">By Theme</button>
+                <button class="sort-btn" data-sort="theme">By location</button>
             </div>
 
             <div class="gallery-grid" id="gallery-grid">
@@ -254,9 +192,7 @@
     <section id="contact" class="section contact-section">
         <div class="container">
             <div class="section-heading">
-                <p class="section-kicker">Contact</p>
-                <h2 class="section-title">Open to research conversations and collaboration.</h2>
-                <p class="section-intro">If my work overlaps with your interests in efficient AI systems, embedded acceleration, or collaborative intelligent transportation, feel free to reach out.</p>
+                <h2 class="section-title">Contact</h2>
             </div>
 
             <div class="contact-content">
@@ -298,11 +234,24 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Zhaodong Lyu. All rights reserved.</p>
+            <p>@2026 Zhaodong Lyu. All Rights Reserved.</p>
             <div class="social-links">
                 <a href="https://github.com/zhaodong-lyu" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/zhaodong-lyu/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 <a href="https://orcid.org/0009-0007-7274-5625" target="_blank" rel="noopener noreferrer" aria-label="ORCID"><i class="fab fa-orcid"></i></a>
+                <svg class="footer-character" viewBox="0 0 790 1261" aria-hidden="true" focusable="false">
+                    <defs>
+                        <image id="character-art" href="assets/images/footer-character.webp" width="1247" height="1261" preserveAspectRatio="none"/>
+                        <clipPath id="character-left"><path d="M0 0H475V263L360 480H0Z"/></clipPath>
+                        <clipPath id="character-right"><path d="M620 0H1247V300H892L636 218Z"/></clipPath>
+                        <clipPath id="character-body"><path d="M0 480H360L475 263V0H620L636 218L892 300H1247V1261H0Z"/></clipPath>
+                    </defs>
+                    <g transform="translate(-220 0)">
+                        <g class="character-ear ear-left"><use href="#character-art" clip-path="url(#character-left)"/></g>
+                        <g class="character-ear ear-right"><use href="#character-art" clip-path="url(#character-right)"/></g>
+                        <use href="#character-art" clip-path="url(#character-body)"/>
+                    </g>
+                </svg>
             </div>
         </div>
     </footer>
@@ -318,6 +267,6 @@
         <a class="lightbox-next" onclick="nextImage()">&#10095;</a>
     </div>
 
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js?v=20261104-harbor"></script>
 </body>
 </html>
